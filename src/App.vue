@@ -1,10 +1,22 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <div class="header-left">
+      <img src="" alt="Logo" class="logo">
+    </div>
+    <div class="header-right">
+      <router-link :to="{ name: 'Home' }">Home</router-link> |
+      <router-link :to="{ name: 'About' }">About</router-link> |
+      <router-link :to="{ name: 'Contact' }">Contact</router-link>
+    </div>
   </div>
   <router-view/>
 </template>
+
+<script>
+export default {
+  name: 'App'
+}
+</script>
 
 <style>
 #app {
@@ -12,19 +24,36 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: white;
+  background: #212121;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 4%;
+  min-height: 100vh;
 }
 
 #nav {
   padding: 30px;
+  display: flex;
+  justify-content: space-between;
 }
 
 #nav a {
+  padding: 6px;
+  font-size: 1.2rem;
   font-weight: bold;
-  color: #2c3e50;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none; 
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+#nav a:hover {
+  color: #4db6ac;
+  background: rgba(255, 255, 255, 0.7)
 }
+
+.img {
+  max-width: 100%;
+}
+
 </style>
