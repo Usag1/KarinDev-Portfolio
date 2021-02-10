@@ -10,29 +10,27 @@
     <img src="../assets/home-pic.jpg" alt="my-pic">
     <Sns /> 
   </div>
-  <Footer />
 </template>
 
 <script>
-import Footer from '../components/Footer'
 import Sns from '../components/Sns'
 
 export default {
   name: 'Home',
-  components: { Footer, Sns }
+  components: { Sns }
 }
 </script>
 
 <style scoped>
 #home {
-  margin: 50px 0;
   padding: 100px 0;
+  height: 50vh;
   display: flex;
   justify-content: space-around;
 }
 
 .home-left {
- margin-top: 130px;
+ padding-top: 25rem;
 }
 
 #home .button {
@@ -45,6 +43,6 @@ export default {
 }
 
 img {
-  width: 360px;
+  width: 40rem;
 }
 </style>
