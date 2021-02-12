@@ -6,6 +6,7 @@
     <div class="header-right">
       <router-link :to="{ name: 'Home' }">Home</router-link> |
       <router-link :to="{ name: 'About' }">About</router-link> |
+      <router-link :to="{ name: 'Blog'}">Blog</router-link> |
       <router-link :to="{ name: 'Contact' }">Contact</router-link>
     </div>
   </div>
@@ -45,11 +46,11 @@ export default {
   color: white;
   text-transform: uppercase;
   text-decoration: none; 
+  transition: all 0.3s;
 }
 
 #nav a:hover {
-  color: #4db6ac;
-  background: rgba(255, 255, 255, 0.7)
+  color: #00838F;
 }
 
 .img {

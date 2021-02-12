@@ -21,28 +21,29 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 #home {
   padding: 100px 0;
   height: 50vh;
   display: flex;
   justify-content: space-around;
 }
-
 .home-left {
- padding-top: 25rem;
+ padding-top: 10rem;
 }
-
 #home .button {
   border-radius: 5px;
   padding: 6px 12px;
   text-decoration: none;
-  background: rgba(0, 155, 159, .8);
+  background: #00838F;
   color: #212121;
   cursor: pointer;
 }
-
+#home .button:hover {
+  box-shadow: 0 0 8px 2px #00838F; 
+}
 img {
-  width: 40rem;
+  height: 20rem;
+  width: 28rem;
 }
 </style>

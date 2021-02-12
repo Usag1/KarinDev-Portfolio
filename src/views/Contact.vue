@@ -1,33 +1,116 @@
 <template class="contact">
-    <section class="get-in-touch">
-    <h1 class="title">Get in touch</h1>
-    <form class="contact-form row">
-        <div class="form-field col x-50">
-            <input id="name" class="input-text js-input" type="text" required>
-            <label class="label" for="name">Name</label>
+    <h2>Contact Me</h2>
+    <p>If you have any job offers, questions or concerns<br>please feel free to contact me</p>
+    <div class="contents">
+        <div class="information">
+            <h3>Contact Information</h3>
+                <div>E-mail</div>
+                <p>karin-dev@protonmail.com</p>
+                <div>Base</div>
+                <p>Copenhagen, Denmark / Tokyo, Japan</p>
+                <p>I'm based in Copenhagen lately</p>
         </div>
-        <div class="form-field col x-50">
-            <input id="email" class="input-text js-input" type="email" required>
-            <label class="label" for="email">E-mail</label>
-        </div>
-        <div class="form-field col x-100">
-            <input id="message" class="input-text js-input" type="text" required>
-            <label class="label" for="message">Message</label>
-        </div>
-        <div class="form-field col x-100 align-center">
-            <input class="submit-btn" type="submit" value="Submit">
-        </div>
-    </form>
-    </section>
+        <form>
+            <div class="content">
+                <label class="label" for="name">Full Name</label>
+                <input type="text" name="name" id="name" required="">
+            </div>
+            <div class="content">
+                <label class="label" for="email">Email</label>
+                <input type="email" name="email" id="email" required="">
+            </div>
+            <div class="content">
+                <label class="label" for="textarea">Message</label>
+                <textarea class="message" name="textarea" id="textarea" required=""></textarea>
+            </div>
+            <div class="button">
+                <input type="submit" value="Send">
+            </div>
+        </form>
+    </div>
 </template>
 
 <script>
     export default {
-        name: 'Contact',
+        name: 'Contact'
 
     }
 </script>
 
-<style lang="scss" scoped>
-
-</style>>
+<style scoped>
+@media screen {
+    
+}
+form {
+    text-align: left;
+    color: #757575;
+    font-size: 16px;
+    width: 500px;
+    padding: 20px 20px;
+    border-radius: 4px;
+    margin: 50px auto;
+    width: 500px;
+    background: #fff;
+    box-shadow:  6px 8px 4px 0 rgba(255, 255, 255, .3);
+    position: relative;
+    }
+.content, .button {
+    margin-left: 260px;
+}   
+label {
+    font-size: 1.125rem;
+    margin: 10px 0 5px;
+    display: block;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    background: rgba(0, 131, 143, .04);
+    border: 1px solid #cfd9db;
+    border-radius: 0.25em;
+    padding: 12px;
+    font-size: 1rem;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .08); 
+}
+textarea {
+    min-height: 120px;
+    max-width: 170px;
+    resize: vertical;
+    overflow: auto;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #006064;
+    box-shadow: 0 0 5px rgba(0, 96, 100, .2);
+}
+input[type="submit"] {
+    margin-top: 10px;
+    border: none;
+    background: #00838F;
+    border-radius: 0.25em;
+    padding: 10px 20px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    appearance: none;
+}
+input[type="submit"]:active {
+    transform: scale(0.9);
+}
+.information {
+    text-align: center;
+    border-radius: 4px;
+    background: #00838F;
+    height: 260px;
+    width: 260px;
+    position: absolute;
+    top: 310px;
+    left: 50px;
+    z-index: 2;
+}
+</style>
