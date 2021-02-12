@@ -1,17 +1,9 @@
 <template class="contact">
-    <h2>Contact Me</h2>
-    <p>If you have any job offers, questions or concerns<br>please feel free to contact me</p>
-    <div class="contents">
-        <div class="information">
-            <h3>Contact Information</h3>
-                <div>E-mail</div>
-                <p>karin-dev@protonmail.com</p>
-                <div>Base</div>
-                <p>Copenhagen, Denmark / Tokyo, Japan</p>
-                <p>I'm based in Copenhagen lately</p>
-        </div>
-        <form>
-            <div class="content">
+    <div class="contact-content">
+        <h2 class="page-title">Contact Me</h2>
+        <p>If you have any job offers, questions or concerns<br>please feel free to contact me</p>
+        <form class="card">
+            <div class="">
                 <label class="label" for="name">Full Name</label>
                 <input type="text" name="name" id="name" required="">
             </div>
@@ -27,6 +19,14 @@
                 <input type="submit" value="Send">
             </div>
         </form>
+        <div class="information">
+            <h3>Contact Information</h3>
+                <div>E-mail</div>
+                <p>karin-dev@protonmail.com</p>
+                <div>Base</div>
+                <p>Copenhagen, Denmark / Tokyo, Japan</p>
+                <p>I'm based in Copenhagen lately</p>
+        </div>
     </div>
 </template>
 
@@ -38,28 +38,32 @@
 </script>
 
 <style scoped>
-@media screen {
-    
+.contact {
+    align-items: center;
+}
+p {
+    font-size: 1rem;
+    margin-top: 10px;
 }
 form {
     text-align: left;
     color: #757575;
     font-size: 16px;
-    width: 500px;
     padding: 20px 20px;
     border-radius: 4px;
-    margin: 50px auto;
-    width: 500px;
+    margin: 28px auto;
+    min-width: 100px;
+    max-width: 500px;
     background: #fff;
     box-shadow:  6px 8px 4px 0 rgba(255, 255, 255, .3);
-    position: relative;
     }
-.content, .button {
-    margin-left: 260px;
-}   
+.contents {
+    display: flex;
+}
+  
 label {
     font-size: 1.125rem;
-    margin: 10px 0 5px;
+    margin: 10px 0 5px 280px;
     display: block;
 }
 input[type="text"],
@@ -71,6 +75,8 @@ textarea {
     padding: 12px;
     font-size: 1rem;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .08); 
+    margin-left: 280px;
+
 }
 textarea {
     min-height: 120px;
@@ -86,7 +92,7 @@ textarea:focus {
     box-shadow: 0 0 5px rgba(0, 96, 100, .2);
 }
 input[type="submit"] {
-    margin-top: 10px;
+    margin: 10px 0 0 350px;
     border: none;
     background: #00838F;
     border-radius: 0.25em;
@@ -108,9 +114,7 @@ input[type="submit"]:active {
     background: #00838F;
     height: 260px;
     width: 260px;
-    position: absolute;
-    top: 310px;
-    left: 50px;
+    margin-top: -350px;
     z-index: 2;
 }
 </style>
