@@ -2,30 +2,32 @@
     <div class="contact-content">
         <h2 class="page-title">Contact Me</h2>
         <p>If you have any job offers, questions or concerns<br>please feel free to contact me</p>
-        <form class="card">
-            <div class="">
-                <label class="label" for="name">Full Name</label>
-                <input type="text" name="name" id="name" required="">
+        <div class="container">
+            <form class="card">
+                <div>
+                    <label class="label" for="name">Full Name</label>
+                    <input type="text" name="name" id="name" required="">
+                </div>
+                <div>
+                    <label class="label" for="email">Email</label>
+                    <input type="email" name="email" id="email" required="">
+                </div>
+                <div>
+                    <label class="label" for="textarea">Message</label>
+                    <textarea class="message" name="textarea" id="textarea" required=""></textarea>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Send">
+                </div>
+            </form>
+            <div class="information">
+                <h3>Contact Information</h3>
+                    <div>E-mail</div>
+                    <p>karin-dev@protonmail.com</p>
+                    <div>Base</div>
+                    <p>Copenhagen, Denmark / Tokyo, Japan</p>
+                    <p>I'm based in Copenhagen lately</p>
             </div>
-            <div class="content">
-                <label class="label" for="email">Email</label>
-                <input type="email" name="email" id="email" required="">
-            </div>
-            <div class="content">
-                <label class="label" for="textarea">Message</label>
-                <textarea class="message" name="textarea" id="textarea" required=""></textarea>
-            </div>
-            <div class="button">
-                <input type="submit" value="Send">
-            </div>
-        </form>
-        <div class="information">
-            <h3>Contact Information</h3>
-                <div>E-mail</div>
-                <p>karin-dev@protonmail.com</p>
-                <div>Base</div>
-                <p>Copenhagen, Denmark / Tokyo, Japan</p>
-                <p>I'm based in Copenhagen lately</p>
         </div>
     </div>
 </template>
@@ -45,7 +47,7 @@ p {
     font-size: 1rem;
     margin-top: 10px;
 }
-form {
+.card {
     text-align: left;
     color: #757575;
     font-size: 16px;
@@ -56,11 +58,8 @@ form {
     max-width: 500px;
     background: #fff;
     box-shadow:  6px 8px 4px 0 rgba(255, 255, 255, .3);
+    
     }
-.contents {
-    display: flex;
-}
-  
 label {
     font-size: 1.125rem;
     margin: 10px 0 5px 280px;
@@ -111,10 +110,15 @@ input[type="submit"]:active {
 .information {
     text-align: center;
     border-radius: 4px;
-    background: #00838F;
+    background-image: linear-gradient(45deg, #26C6DA, #00838F, #006064);
     height: 260px;
-    width: 260px;
-    margin-top: -350px;
+    width: 310px;
+    position: absolute;
+    top: 18%;
+    right: 53%;
     z-index: 2;
+}
+.container {
+    position: relative;
 }
 </style>
