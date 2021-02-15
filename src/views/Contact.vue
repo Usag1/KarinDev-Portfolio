@@ -114,7 +114,7 @@ input[type="submit"]:active {
     height: 260px;
     width: 310px;
     position: absolute;
-    top: 18%;
+    top: 20%;
     right: 53%;
     z-index: 2;
 }
