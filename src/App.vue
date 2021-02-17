@@ -10,7 +10,9 @@
       <router-link :to="{ name: 'Contact' }">Contact</router-link>
     </div>
   </div>
+  <transition name="router-anim" enter-active-class="animated fadeInDown" leave-active-class="animated fadeOutDown">
   <router-view/>
+  </transition>
 </template>
 
 <script>
@@ -20,6 +22,9 @@ export default {
 </script>
 
 <style>
+
+@import "https://cdn.jsdelivr.net/npm/animate.css@3.5.1";
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -27,13 +32,14 @@ export default {
   text-align: center;
   color: white;
   background: #212121;
-  max-width: 1100px;
+  max-width: 1800px;
   margin: 0 auto;
   padding: 0 4%;
   min-height: 100vh;
 }
 
 #nav {
+  margin-bottom: 50px;
   padding: 30px;
   display: flex;
   justify-content: space-between;

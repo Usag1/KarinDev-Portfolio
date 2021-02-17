@@ -18,5 +18,9 @@
   font-size: 1rem;
   line-height: 19px;
 }
+img {
+  height: 20rem;
+  width: 28rem;
+}
 </style>
 

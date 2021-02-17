@@ -7,29 +7,26 @@
       Contact me
       </router-link>
     </div>
-    <img src="../assets/home-pic.jpg" alt="my-pic">
-    <Sns /> 
+    <img src="../assets/karin1_edited.jpg" alt="my-pic">
   </div>
 </template>
 
 <script>
-import Sns from '../components/Sns'
 
 export default {
   name: 'Home',
-  components: { Sns }
 }
 </script>
 
-<style>
+<style scoped>
 #home {
   padding: 100px 0;
   height: 50vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 .home-left {
- padding-top: 10rem;
+ padding-top: 350px;
 }
 #home .button {
   border-radius: 5px;
@@ -43,6 +40,7 @@ export default {
   box-shadow: 0 0 8px 2px #00838F; 
 }
 img {
+  padding-top: 200px;
   height: 20rem;
   width: 28rem;
 }

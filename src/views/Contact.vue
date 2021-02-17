@@ -20,14 +20,16 @@
                     <input type="submit" value="Send">
                 </div>
             </form>
-            <div class="information">
+            <section class="infor-box">
                 <h3>Contact Information</h3>
-                    <div>E-mail</div>
-                    <p>karin-dev@protonmail.com</p>
-                    <div>Base</div>
-                    <p>Copenhagen, Denmark / Tokyo, Japan</p>
-                    <p>I'm based in Copenhagen lately</p>
-            </div>
+                    <div class="information">
+                        <h4>E-mail</h4>
+                        <p>karin-dev@protonmail.com</p>
+                        <h4>Base</h4>
+                        <p>Copenhagen, Denmark / Tokyo, Japan</p>
+                        <p>I'm based in Copenhagen lately</p>
+                    </div>
+            </section>
         </div>
     </div>
 </template>
@@ -45,7 +47,7 @@
 }
 p {
     font-size: 1rem;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 .card {
     text-align: left;
@@ -53,16 +55,16 @@ p {
     font-size: 16px;
     padding: 20px 20px;
     border-radius: 4px;
-    margin: 28px auto;
+    margin: 50px auto;
     min-width: 100px;
-    max-width: 500px;
+    max-width: 600px;
     background: #fff;
     box-shadow:  6px 8px 4px 0 rgba(255, 255, 255, .3);
     
     }
-label {
+.label {
     font-size: 1.125rem;
-    margin: 10px 0 5px 280px;
+    margin: 10px 0 5px 300px;
     display: block;
 }
 input[type="text"],
@@ -74,12 +76,12 @@ textarea {
     padding: 12px;
     font-size: 1rem;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .08); 
-    margin-left: 280px;
-
+    margin-left: 300px;
+    min-width: 250px;
 }
 textarea {
     min-height: 120px;
-    max-width: 170px;
+    max-width: 250px;
     resize: vertical;
     overflow: auto;
 }
@@ -91,7 +93,7 @@ textarea:focus {
     box-shadow: 0 0 5px rgba(0, 96, 100, .2);
 }
 input[type="submit"] {
-    margin: 10px 0 0 350px;
+    margin: 10px 0 0 400px;
     border: none;
     background: #00838F;
     border-radius: 0.25em;
@@ -107,15 +109,16 @@ input[type="submit"] {
 input[type="submit"]:active {
     transform: scale(0.9);
 }
-.information {
+.infor-box {
     text-align: center;
+    padding: 15px;
     border-radius: 4px;
     background-image: linear-gradient(45deg, #26C6DA, #00838F, #006064);
     height: 260px;
     width: 310px;
     position: absolute;
-    top: 20%;
-    right: 53%;
+    top: 18%;
+    right: 55%;
     z-index: 2;
 }
 .container {
