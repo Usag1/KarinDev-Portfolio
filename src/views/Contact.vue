@@ -45,10 +45,6 @@
 .contact {
     align-items: center;
 }
-p {
-    font-size: 1rem;
-    margin-top: 20px;
-}
 .card {
     text-align: left;
     color: #757575;
@@ -111,10 +107,10 @@ input[type="submit"]:active {
 }
 .infor-box {
     text-align: center;
-    padding: 15px;
+    padding: 0 15px;
     border-radius: 4px;
     background-image: linear-gradient(45deg, #26C6DA, #00838F, #006064);
-    height: 260px;
+    height: 280px;
     width: 310px;
     position: absolute;
     top: 18%;
@@ -123,5 +119,16 @@ input[type="submit"]:active {
 }
 .container {
     position: relative;
+}
+.infor-box h3 {
+    font-size: 1.5rem;
+}
+.information h4 {
+    font-size: 1.125rem;
+}
+.information p {
+    font-size: 1rem;
+    line-height: 10px;
+    letter-spacing: .6px;
 }
 </style>

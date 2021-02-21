@@ -2,12 +2,12 @@
   <div id="home">
     <div class="home-left">
       <h1>Karin Ikenaga</h1>
-      <p>Web designer & Frontend developer</p>
+      <p>Web designer<br>&<br> Frontend developer</p>
       <router-link :to="{ name:'Contact' }" class="button" >
       Contact me
       </router-link>
     </div>
-    <img src="../assets/karin1_edited.jpg" alt="my-pic">
+    <img src="../assets/home-pic.jpg" alt="my-pic">
   </div>
 </template>
 
@@ -35,13 +35,21 @@ export default {
   background: #00838F;
   color: #212121;
   cursor: pointer;
+  font-size: 1.25rem;
 }
 #home .button:hover {
   box-shadow: 0 0 8px 2px #00838F; 
 }
-img {
-  padding-top: 200px;
-  height: 20rem;
-  width: 28rem;
+#home h1 {
+  font-size: 2.5rem;
+}
+#home p {
+  font-size: 1.5rem;
+  line-height: 30px;
+}
+#home img {
+  padding-top: 50px;
+  height: 30rem;
+  width: 38rem;
 }
 </style>

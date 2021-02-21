@@ -37,30 +37,34 @@ export default {
   padding: 0 4%;
   min-height: 100vh;
 }
-
 #nav {
   margin-bottom: 50px;
   padding: 30px;
   display: flex;
   justify-content: space-between;
 }
-
 #nav a {
   padding: 6px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: white;
   text-transform: uppercase;
   text-decoration: none; 
   transition: all 0.3s;
 }
-
 #nav a:hover {
   color: #00838F;
 }
-
 .img {
   max-width: 100%;
 }
-
+h2 {
+  margin-top: 100px;
+  font-size: 2.5rem;
+}
+p {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+}
 </style>
