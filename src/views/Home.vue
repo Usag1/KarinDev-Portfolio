@@ -29,7 +29,7 @@ export default {
  padding-top: 350px;
 }
 #home .button {
-  border-radius: 5px;
+  border-radius: 4px;
   padding: 6px 12px;
   text-decoration: none;
   background: #00838F;

@@ -1,8 +1,8 @@
 <template>
   <div class="about">
     <h2>About me</h2>
-    <h3>Hello World<br>I'm Karin</h3>
-    <p>I am a positve and passionate self-taught developer<br>My focus is on frontend, but I also know some backend using Node.JS<br>
+    <h3>Hello World</h3>
+    <p>My name is Karin Ikenaga<br>I am a positve and passionate self-taught developer<br>My focus is on frontend, but I also know some backend using Node.JS<br>
     other than HTML and CSS I enjoy writing JavaScript, and know React.JS and Vue.JS<br>
     I am originally from Japan, now living in Denmark</p>
 
@@ -32,5 +32,6 @@ h3 {
 img {
   height: 3em;
 }
+
 </style>
 

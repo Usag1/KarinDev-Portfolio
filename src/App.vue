@@ -1,12 +1,19 @@
 <template>
   <div id="nav">
     <div class="header-left">
-      <img src="" alt="Logo" class="logo">
+     <img src="https://see.fontimg.com/api/renderfont4/dE0g/eyJyIjoiZnMiLCJoIjoxNDUsInciOjE3NjUsImZzIjo4MiwiZmdjIjoiI0ZGRkNGQyIsImJnYyI6IiMwM0EwOEIiLCJ0IjoxfQ/S2FyaW5EZXY/beautiful-people-personal-use.png" 
+     alt="Fancy fonts" class="logo">
     </div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+      </svg>
     <div class="header-right">
-      <router-link :to="{ name: 'Home' }">Home</router-link> |
-      <router-link :to="{ name: 'About' }">About</router-link> |
-      <router-link :to="{ name: 'Blog'}">Blog</router-link> |
+      <router-link :to="{ name: 'Home' }">Home</router-link>
+      <span>|</span> 
+      <router-link :to="{ name: 'About' }">About</router-link>
+      <span>|</span>
+      <router-link :to="{ name: 'Blog'}">Blog</router-link>
+      <span>|</span>
       <router-link :to="{ name: 'Contact' }">Contact</router-link>
     </div>
   </div>
@@ -32,13 +39,14 @@ export default {
   text-align: center;
   color: white;
   background: #212121;
-  max-width: 1800px;
+  background-size: cover;
+  background-position: center top;
   margin: 0 auto;
   padding: 0 4%;
   min-height: 100vh;
 }
 #nav {
-  margin-bottom: 50px;
+  height: 100px;
   padding: 30px;
   display: flex;
   justify-content: space-between;
@@ -55,16 +63,55 @@ export default {
 #nav a:hover {
   color: #00838F;
 }
+#nav .logo {
+  width: 200px;
+}
+#nav .bi {
+  float: right;
+  display: none;
+}
 .img {
   max-width: 100%;
 }
 h2 {
-  margin-top: 100px;
   font-size: 2.5rem;
 }
 p {
   font-size: 1.25rem;
   line-height: 1.5rem;
   letter-spacing: 1px;
+}
+
+/*Mobile
+------------------------------*/
+@media (max-width: 600px) {
+  #nav .logo {
+  width: 100px;
+  }
+  #nav .bi {
+    display: block;
+    cursor: pointer;
+  }
+  .header-right {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(33, 33, 33, .9);
+    top: 110px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  #nav a{
+    display: block;
+    font-size: 1rem;
+  }
+  #nav a:hover, {
+    background: white;
+    color: #00838f;
+  }
+  #nav span {
+    display: none;
+  }
 }
 </style>

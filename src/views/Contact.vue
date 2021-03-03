@@ -1,36 +1,38 @@
-<template class="contact">
-    <div class="contact-content">
-        <h2 class="page-title">Contact Me</h2>
-        <p>If you have any job offers, questions or concerns<br>please feel free to contact me</p>
-        <div class="container">
-            <form class="card">
-                <div>
-                    <label class="label" for="name">Full Name</label>
-                    <input type="text" name="name" id="name" required="">
-                </div>
-                <div>
-                    <label class="label" for="email">Email</label>
-                    <input type="email" name="email" id="email" required="">
-                </div>
-                <div>
-                    <label class="label" for="textarea">Message</label>
-                    <textarea class="message" name="textarea" id="textarea" required=""></textarea>
-                </div>
-                <div class="button">
-                    <input type="submit" value="Send">
-                </div>
-            </form>
-            <section class="infor-box">
-                <h3>Contact Information</h3>
-                    <div class="information">
-                        <h4>E-mail</h4>
-                        <p>karin-dev@protonmail.com</p>
-                        <h4>Base</h4>
-                        <p>Copenhagen, Denmark / Tokyo, Japan</p>
-                        <p>I'm based in Copenhagen lately</p>
+<template>
+    <div id="contact">
+        <h2>Contact Me</h2>
+            <p>If you have any job offers, questions or concerns<br>please feel free to contact me</p>
+            <div class="container">
+                <form class="card">
+                    <div>
+                        <label class="label" for="name">Full Name</label>
+                        <input type="text" name="name" id="name" required="">
                     </div>
-            </section>
-        </div>
+                    <div>
+                        <label class="label" for="email">Email</label>
+                        <input type="email" name="email" id="email" required="">
+                    </div>
+                    <div>
+                        <label class="label" for="textarea">Message</label>
+                        <textarea class="message" name="textarea" id="textarea" required=""></textarea>
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="Send">
+                    </div>
+                </form>
+                <section class="information">
+                    <h3>Contact Information</h3>
+                        <h4><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                        <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+                        </svg>E-mail</h4>
+                            <a href="mailto:karin-dev@protonmail.com">karin-dev@protonmail.com</a>
+                        <h4><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                        </svg>Base</h4>
+                            <p>Copenhagen, Denmark / Tokyo, Japan<br>
+                            I'm based in Copenhagen lately</p>
+                </section>
+            </div>
     </div>
 </template>
 
@@ -42,7 +44,7 @@
 </script>
 
 <style scoped>
-.contact {
+#contact {
     align-items: center;
 }
 .card {
@@ -105,7 +107,7 @@ input[type="submit"] {
 input[type="submit"]:active {
     transform: scale(0.9);
 }
-.infor-box {
+.information {
     text-align: center;
     padding: 0 15px;
     border-radius: 4px;
@@ -115,12 +117,11 @@ input[type="submit"]:active {
     position: absolute;
     top: 18%;
     right: 55%;
-    z-index: 2;
 }
 .container {
     position: relative;
 }
-.infor-box h3 {
+.information h3 {
     font-size: 1.5rem;
 }
 .information h4 {
@@ -128,7 +129,12 @@ input[type="submit"]:active {
 }
 .information p {
     font-size: 1rem;
-    line-height: 10px;
+    line-height: 25px;
     letter-spacing: .6px;
 }
+.bi {
+    margin-right: 10px;
+    margin-left: -10px;
+}
+
 </style>
