@@ -82,36 +82,4 @@ p {
   letter-spacing: 1px;
 }
 
-/*Mobile
-------------------------------*/
-@media (max-width: 600px) {
-  #nav .logo {
-  width: 100px;
-  }
-  #nav .bi {
-    display: block;
-    cursor: pointer;
-  }
-  .header-right {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: rgba(33, 33, 33, .9);
-    top: 110px;
-    left: -100%;
-    text-align: center;
-    transition: all .5s;
-  }
-  #nav a{
-    display: block;
-    font-size: 1rem;
-  }
-  #nav a:hover, {
-    background: white;
-    color: #00838f;
-  }
-  #nav span {
-    display: none;
-  }
-}
 </style>

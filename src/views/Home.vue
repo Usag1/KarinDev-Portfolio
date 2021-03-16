@@ -7,7 +7,7 @@
       Contact me
       </router-link>
     </div>
-    <img src="../assets/home-pic.jpg" alt="my-pic">
+    <img src="../assets/karin.png" alt="my-pic">
   </div>
 </template>
 
@@ -23,7 +23,7 @@ export default {
   padding: 100px 0;
   height: 50vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 .home-left {
  padding-top: 350px;
@@ -49,7 +49,5 @@ export default {
 }
 #home img {
   padding-top: 50px;
-  height: 30rem;
-  width: 38rem;
 }
 </style>
