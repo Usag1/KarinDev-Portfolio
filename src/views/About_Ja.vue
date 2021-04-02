@@ -1,10 +1,12 @@
 <template>
-  <div class="about">
+  <div class="about-ja">
     <h2>About me</h2>
     <h3>Hello World!</h3>
-    <p>My name is Karin Ikenaga. I am a positve and passionate self-taught developer. My focus is on frontend, but I also know some backend using Node.JS 
-    other than HTML and CSS I enjoy writing JavaScript, and know React.JS and Vue.JS. 
-    I am originally from Japan, now living in Denmark.</p>
+    <p>池永夏鈴　1994年埼玉県生まれ。東京の大学を卒業後、独学でプログラミングの勉強を始める。
+      HTML、CSS、JavaScript、React.JSやVue.JSを使ったフロントエンドを中心に行っているが、Node.JSを使ったバックエンドの知識も多少ある。
+      現在は、Googleが提供している'Google IT Automation with Python プロフェッショナル認定'を受講中。
+      日本生まれ日本育ちで、現在はデンマークのコペンハーゲンに生活の拠点をおいている。
+    </p>
 
     <div class="grid">
       <img src="../assets/html5-logo.png" alt="HTML5-logo">
@@ -16,14 +18,6 @@
     </div>
   </div>
 </template>
-
-<script>
-
-  export default {
-    name: 'About',
-  }
-
-</script>
 
 <style scoped>
 h3 {
@@ -45,4 +39,3 @@ p {
   width: 750px;
 }
 </style>
-

@@ -1,23 +1,23 @@
 <template>
-    <div id="contact">
+    <div id="contact-ja">
         <h2>Contact Me</h2>
-            <p>If you have any job offers, questions or concerns<br>please feel free to contact me</p>
+            <p>ご質問やお仕事のご依頼などございましたら<br>お気軽にご連絡ください</p>
             <div class="container">
                 <form class="card">
                     <div>
-                        <label class="label" for="name">Full Name</label>
+                        <label class="label" for="name">氏名</label>
                         <input type="text" name="name" id="name" required="">
                     </div>
                     <div>
-                        <label class="label" for="email">Email</label>
+                        <label class="label" for="email">メールアドレス</label>
                         <input type="email" name="email" id="email" required="">
                     </div>
                     <div>
-                        <label class="label" for="textarea">Message</label>
+                        <label class="label" for="textarea">メッセージ</label>
                         <textarea class="message" name="textarea" id="textarea" required=""></textarea>
                     </div>
                     <div class="button">
-                        <input type="submit" value="Send">
+                        <input type="submit" value="送信">
                     </div>
                 </form>
                 <section class="information">
@@ -29,18 +29,18 @@
                         <h4><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
                         <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
                         </svg>Base</h4>
-                            <p>Copenhagen, Denmark / Tokyo, Japan<br>
-                            I'm based in Copenhagen lately</p>
+                            <h5>コペンハーゲン / 東京</h5>
+                            <p>※現在はデンマークのコペンハーゲンを<br>ベースにしています</p>
                 </section>
             </div>
     </div>
 </template>
 
 <script>
+    export default {
+        name: 'Contact_Ja'
 
-  export default {
-    name: 'Contact'
-  }
+    }
 </script>
 
 <style scoped>
@@ -112,10 +112,10 @@ input[type="submit"]:active {
     padding: 0 15px;
     border-radius: 4px;
     background-image: linear-gradient(45deg, #26C6DA, #00838F, #006064);
-    height: 280px;
+    height: 310px;
     width: 310px;
     position: absolute;
-    top: 18%;
+    top: 15%;
     right: 55%;
 }
 .container {
@@ -127,10 +127,15 @@ input[type="submit"]:active {
 .information h4 {
     font-size: 1.125rem;
 }
+.information h5 {
+    font-size: .9rem;
+    padding: 0;
+    margin: 0;
+}
 .information p {
-    font-size: 1rem;
-    line-height: 25px;
-    letter-spacing: .6px;
+    font-size: .7rem;
+    line-height: 20px;
+    letter-spacing: .8px;
 }
 .bi {
     margin-right: 10px;

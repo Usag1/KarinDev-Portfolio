@@ -21,7 +21,7 @@ export default {
     },
     components: {
         Latest,
-        Posts
+        Posts,
     },
     methods: {
         getPosts () {
