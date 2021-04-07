@@ -31,4 +31,12 @@ import Header from './components/Header';
   padding: 0 4%;
   min-height: 100vh;
 }
+h2 {
+  font-size: 2.5rem;
+}
+p {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+}
 </style>

@@ -15,11 +15,6 @@
       <router-link :to="{ name: 'Blog'}">Blog</router-link>
       
       <router-link :to="{ name: 'Contact' }">Contact</router-link>
-    
-      <ul class="lang">
-        <li class="eng"><router-link :to="{ name: 'Home' }"><img src="../assets/engFlag.svg" alt="English" /></router-link></li>
-        <li class="ja"><router-link :to="{ name: 'Home_Ja' }"><img src="../assets/japanFlag.svg" alt="日本語" /></router-link></li>
-      </ul>
     </div>
   </div>
   <transition name="router-anim" enter-active-class="animated fadeInDown" leave-active-class="animated fadeOutDown">
@@ -35,7 +30,7 @@
 
 <style scope>
 #nav {
-  height: 65px;
+  height: 6vh;
   padding: 30px;
   display: flex;
   justify-content: space-between;
@@ -55,7 +50,8 @@
   background: linear-gradient(currentColor, currentColor) left bottom / 85% 1px no-repeat;
 }
 #nav .logo {
-  width: 200px;
+  padding-right: 20px;
+  width: 50%;
 }
 #nav .bi {
   float: right;
@@ -64,19 +60,38 @@
 .img {
   max-width: 100%;
 }
-h2 {
-  font-size: 2.5rem;
-}
-p {
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  letter-spacing: 1px;
-}
 .header-right {
   margin-top: 1.5rem;
   display: flex;
 }
 #nav ul {
   list-style: none;
+}
+.humberger {
+  display: none;
+}
+
+/* Mobile & Tablet */
+@media (max-width: 768px) {
+  #nav {
+    overflow-x: hidden;
+  }
+  .header-right {
+    position: absolute;
+    right: 0px;
+    height: 90vh;
+    top: 10vh;
+    background: rgba(33, 33, 33, .8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transform: translate(100%);
+    transition: transform .5s ease-in;
+  }
+  .header-right a {
+    opacity: 0;
+  }
+  
 }
 </style>

@@ -65,7 +65,7 @@ export default {
   line-height: 30px;
 }
 .my-pic {
-  height: 700px;
+  height: 650px;
 }
 #home ul {
   list-style: none;
