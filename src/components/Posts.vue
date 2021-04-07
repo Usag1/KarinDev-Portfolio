@@ -41,6 +41,8 @@
     color: #212121;
     cursor: pointer;
     font-size: 1.25rem;
+    padding-top: 7px;
+    box-sizing: border-box;
 }
 .load:hover {
   box-shadow: 0 0 8px 2px #00838F; 

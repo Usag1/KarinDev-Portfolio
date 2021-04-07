@@ -35,22 +35,24 @@
 
 <style scope>
 #nav {
-  height: 100px;
+  height: 65px;
   padding: 30px;
   display: flex;
   justify-content: space-between;
 }
 #nav a {
-  padding: 6px;
+  padding: 0 20px 0 0;
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
   text-transform: uppercase;
   text-decoration: none; 
   transition: all 0.3s;
+  background: linear-gradient(currentColor, currentColor) left bottom / 0% 1px no-repeat;
 }
 #nav a:hover {
   color: #00838F;
+  background: linear-gradient(currentColor, currentColor) left bottom / 85% 1px no-repeat;
 }
 #nav .logo {
   width: 200px;
