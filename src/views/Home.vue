@@ -17,7 +17,7 @@
     <div class="home-center">
       <h1>Karin Ikenaga</h1>
       <p>Web designer<br>&<br> Frontend developer</p>
-      <router-link :to="{ name:'Contact_Ja' }" class="button" >
+      <router-link :to="{ name:'Contact' }" class="button" >
       Contact me
       </router-link>
     </div>
@@ -34,14 +34,13 @@ export default {
 
 <style scoped>
 #home {
-  padding: 100px 0;
-  height: 50vh;
+  padding-top: 5em;
   display: grid;
   gap: 24px;
-  grid-template-columns: 30px 1fr 1fr;
+  grid-template-columns: 30px 1fr 40%;
 }
 .home-center{
-  padding-top: 360px;
+  padding-top: 6em;
 }
 #home .button {
   border-radius: 4px;
@@ -51,8 +50,7 @@ export default {
   color: #212121;
   cursor: pointer;
   font-size: 1.25rem;
-  transition: all .2s;
-  
+  transition: all .2s;  
 }
 #home .button:hover {
   box-shadow: 0 0 8px 2px #00838F; 
@@ -65,7 +63,7 @@ export default {
   line-height: 30px;
 }
 .my-pic {
-  height: 650px;
+  height: 25rem;
 }
 #home ul {
   list-style: none;
@@ -80,5 +78,45 @@ export default {
 .bi:hover {
   color: #00838F;
   transform: scale(1.3);
+}
+
+/* Mobile & Tablet */
+@media (max-width: 760px) {
+  #home {
+  display: flex;
+  flex-direction: column-reverse;
+  }
+  #home .button {
+  border-radius: 4px;
+  padding: 6px 12px;
+  text-decoration: none;
+  background: #00838F;
+  color: #212121;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all .2s;  
+  }
+  .home-center{
+  padding-top: 0;
+  }
+  #home h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  }
+  #home p {
+  font-size: 1.2rem;
+  line-height: 25px;
+  }
+  .my-pic {
+  display: none;
+  }
+  #home ul {
+  display: flex;
+  justify-content: center;
+  margin-top: 5em;
+  }
+  .bi {
+  margin: 0 .6em;
+  }
 }
 </style>

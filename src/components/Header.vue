@@ -1,20 +1,19 @@
 <template>
-  <div id="nav">
+  <Navbar_mobile v-if="mobileView" :class="{'open':!showNav}" />
+  <div class="nav">
     <div class="header-left">
      <img src="https://see.fontimg.com/api/renderfont4/dE0g/eyJyIjoiZnMiLCJoIjoxNDUsInciOjE3NjUsImZzIjo4MiwiZmdjIjoiI0ZGRkNGQyIsImJnYyI6IiMwM0EwOEIiLCJ0IjoxfQ/S2FyaW5EZXY/beautiful-people-personal-use.png" 
      alt="Fancy fonts" class="logo">
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-      </svg>
     <div class="header-right">
-      <router-link :to="{ name: 'Home' }">Home</router-link>
-       
-      <router-link :to="{ name: 'About' }">About</router-link>
-      
-      <router-link :to="{ name: 'Blog'}">Blog</router-link>
-      
-      <router-link :to="{ name: 'Contact' }">Contact</router-link>
+      <Navbar v-if="!mobileView" />
+      <div class="menu-icon" v-if="mobileView" @click="showNav = !showNav">
+        <button class="burger-x" :class="x">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </div>
   <transition name="router-anim" enter-active-class="animated fadeInDown" leave-active-class="animated fadeOutDown">
@@ -23,75 +22,100 @@
 </template>
 
 <script>
+import { computed } from 'vue';
+import Navbar from './Navbar';
+import Navbar_mobile from './Navbar_mobile';
+
   export default {
-  name: 'Header'
+  name: 'Header',
+  components: {
+    Navbar,
+    Navbar_mobile
+  },
+  data: () => {
+    return {
+      mobileView: true,
+      showNav: false
+    };
+  },
+  methods: {
+    handleView() {
+      this.mobileView = window.innerWidth <= 760;
+    }
+  },
+  created() {
+    this.handleView();
+  },
+  computed: {
+    x: function(){
+      return {
+        x: this.showNav
+      }
+    }
   }
+};
 </script>
 
-<style scope>
-#nav {
-  height: 6vh;
+<style scoped>
+.nav {
   padding: 30px;
   display: flex;
   justify-content: space-between;
 }
-#nav a {
-  padding: 0 20px 0 0;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: white;
-  text-transform: uppercase;
-  text-decoration: none; 
-  transition: all 0.3s;
-  background: linear-gradient(currentColor, currentColor) left bottom / 0% 1px no-repeat;
-}
-#nav a:hover {
-  color: #00838F;
-  background: linear-gradient(currentColor, currentColor) left bottom / 85% 1px no-repeat;
-}
-#nav .logo {
+.nav .logo {
   padding-right: 20px;
-  width: 50%;
-}
-#nav .bi {
-  float: right;
-  display: none;
+  height: 4em;
 }
 .img {
   max-width: 100%;
 }
-.header-right {
-  margin-top: 1.5rem;
-  display: flex;
+.burger-x{
+  padding: 5%;
+  margin-right: 5%;
+  cursor: pointer;
 }
-#nav ul {
-  list-style: none;
+.burger-x,
+.burger-x span {
+  display: inline-block;
+  transition: all .4s;
+  box-sizing: border-box;
 }
-.humberger {
-  display: none;
+.burger-x {
+  position: relative;
+  width: 2.5em;
+  height: 2em;
+  background: none;
+  border: none;
+  appearance: none;
+  cursor: pointer;
 }
-
-/* Mobile & Tablet */
-@media (max-width: 768px) {
-  #nav {
-    overflow-x: hidden;
-  }
-  .header-right {
-    position: absolute;
-    right: 0px;
-    height: 90vh;
-    top: 10vh;
-    background: rgba(33, 33, 33, .8);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    transform: translate(100%);
-    transition: transform .5s ease-in;
-  }
-  .header-right a {
-    opacity: 0;
-  }
-  
+.burger-x span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+.burger-x span:nth-of-type(1) {
+  top: 0;
+}
+.burger-x span:nth-of-type(2) {
+  top: 45%;
+}
+.burger-x span:nth-of-type(3) {
+  bottom: 0;
+}
+.burger-x.x span:nth-of-type(1) {
+  transform: translateY(12.5px) rotate(-315deg);
+}
+.burger-x.x span:nth-of-type(2) {
+  opacity: 0;
+}
+.burger-x.x span:nth-of-type(3) {
+  transform: translateY(-12.5px) rotate(315deg);
+}
+.open {
+  transform: translateX(760px);
 }
 </style>

@@ -25,10 +25,9 @@ import Header from './components/Header';
   text-align: center;
   color: white;
   background: #212121;
-  background-size: cover;
-  background-position: center top;
+  background-size: auto;
   margin: 0 auto;
-  padding: 0 4%;
+  padding: 0 4% 4%;
   min-height: 100vh;
 }
 h2 {
@@ -38,5 +37,17 @@ p {
   font-size: 1.25rem;
   line-height: 1.5rem;
   letter-spacing: 1px;
+}
+
+/* Mobile & Tablet */
+@media (max-width: 768px) {
+  h2 {
+  font-size: 2rem;
+  }
+  p {
+  font-size: 1rem;
+  line-height: 1.4rem;
+  letter-spacing: 1px;
+  }
 }
 </style>

@@ -27,12 +27,13 @@
 
 <style scoped>
 h3 {
-  margin-top: 100px;
+  margin-top: 5%;
   font-size: 1.8rem;
   line-height: 40px;
 }
 .grid {
   margin: 10%;
+  padding: 0;
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -43,6 +44,28 @@ img {
 p {
   margin: 2rem auto;
   width: 750px;
+}
+
+/* Mobile & Tablet */
+@media (max-width: 768px) {
+  h3 {
+  margin-top: 1.5em;
+  font-size: 1.5rem;
+  line-height: 25px;
+  }
+  p {
+  margin: 2rem auto;
+  width: 80%;
+  }
+  .grid {
+  padding: 0 40%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) ;
+  row-gap: 10px;
+  }
+  img {
+    height: 2em;
+  }
 }
 </style>
 

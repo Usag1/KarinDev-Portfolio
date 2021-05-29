@@ -28,7 +28,7 @@
             </div>
         </div>
         <div class="posts" v-else>
-            <p>Not enough posts to display</p>
+            <p>Comming soon...</p>
         </div>
     </section>
 </template>

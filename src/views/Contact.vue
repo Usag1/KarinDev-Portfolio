@@ -1,9 +1,9 @@
 <template>
-    <div id="contact">
+    <div class="contact">
         <h2>Contact Me</h2>
             <p>If you have any job offers, questions or concerns<br>please feel free to contact me</p>
             <div class="container">
-                <form class="card">
+                <form action="mailto:karin-dev@protonmail.com" method="post" enctype="text/plain" class="card">
                     <div>
                         <label class="label" for="name">Full Name</label>
                         <input type="text" name="name" id="name" required="">
@@ -11,6 +11,10 @@
                     <div>
                         <label class="label" for="email">Email</label>
                         <input type="email" name="email" id="email" required="">
+                    </div>
+                    <div>
+                        <label class="label" for="subject">Subject</label>
+                        <input type="subject" name="subject" id="subject" required="">
                     </div>
                     <div>
                         <label class="label" for="textarea">Message</label>
@@ -44,9 +48,6 @@
 </script>
 
 <style scoped>
-#contact {
-    align-items: center;
-}
 .card {
     text-align: left;
     color: #757575;
@@ -58,8 +59,7 @@
     max-width: 600px;
     background: #fff;
     box-shadow:  6px 8px 4px 0 rgba(255, 255, 255, .3);
-    
-    }
+}
 .label {
     font-size: 1.125rem;
     margin: 10px 0 5px 300px;
@@ -67,6 +67,7 @@
 }
 input[type="text"],
 input[type="email"],
+input[type="subject"],
 textarea {
     background: rgba(0, 131, 143, .04);
     border: 1px solid #cfd9db;
@@ -85,10 +86,10 @@ textarea {
 }
 input[type="text"]:focus,
 input[type="email"]:focus,
+input[type="subject"]:focus,
 textarea:focus {
     outline: none;
     border-color: #006064;
-    box-shadow: 0 0 5px rgba(0, 96, 100, .2);
 }
 input[type="submit"] {
     margin: 10px 0 0 400px;
@@ -106,6 +107,7 @@ input[type="submit"] {
 }
 input[type="submit"]:active {
     transform: scale(0.9);
+    box-shadow: 0 0 5px rgba(0, 96, 100, .2);
 }
 .information {
     text-align: center;
@@ -114,6 +116,7 @@ input[type="submit"]:active {
     background-image: linear-gradient(45deg, #26C6DA, #00838F, #006064);
     height: 280px;
     width: 310px;
+    box-shadow: 6px 8px 4px 0 rgba(0, 131, 143, .3);
     position: absolute;
     top: 18%;
     right: 55%;
@@ -137,4 +140,82 @@ input[type="submit"]:active {
     margin-left: -10px;
 }
 
+/* Mobile & Tablet */
+@media (max-width: 540px) {
+    .contact {
+        padding-bottom: 800px;
+    }
+    .card {
+        text-align: center;
+        font-size: 12px;
+        padding: 20px 20px;
+        margin: auto ;
+        min-width: 80%;
+        position: absolute;
+        top: 270px;
+        right: 0;
+        left: 0;
+    }
+    .label {
+        font-size: 1.125rem;
+        margin: 5px 8% 5px ;
+        text-align: left;
+        display: block;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="subject"],
+    textarea {
+        background: rgba(0, 131, 143, .04);
+        border: 1px solid #cfd9db;
+        border-radius: 0.25em;
+        padding: 12px;
+        font-size: 1rem;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .08); 
+        width: 80%;
+        margin-left: 0;
+    }
+    textarea {
+        min-height: 120px;
+        min-width: 80%;
+        resize: vertical;
+        overflow: auto;
+    }
+    input[type="submit"] {
+        margin: 10px 35% ;
+        border: none;
+        background: #00838F;
+        border-radius: 0.25em;
+        padding: 10px 20px;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        appearance: none;
+    }
+    .information {
+        text-align: center;
+        padding: 0;
+        border-radius: 4px;
+        background-image: linear-gradient(45deg, #26C6DA, #00838F, #006064);
+        min-width: 80%;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+    }
+    .information h3 {
+        font-size: 1.2rem;
+    }
+    .information h4 {
+        font-size: 1rem;
+    }
+    .information p {
+        font-size: .8rem;
+        line-height: 20px;
+        letter-spacing: .6px;
+    }
+}
 </style>
