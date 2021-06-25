@@ -21,7 +21,7 @@
       Contact me
       </router-link>
     </div>
-    <img class="my-pic" src="../assets/karin.png" alt="my-pic">
+    <img class="my-pic" src="../assets/KarinDev.png" alt="my-pic">
   </div>
 </template>
 
@@ -34,13 +34,13 @@ export default {
 
 <style scoped>
 #home {
-  padding-top: 5em;
+  padding-top: 1em;
   display: grid;
-  gap: 24px;
-  grid-template-columns: 30px 1fr 40%;
+  gap: 10px;
+  grid-template-columns: 30px 1fr 50%;
 }
 .home-center{
-  padding-top: 6em;
+  padding-top: 12em;
 }
 #home .button {
   border-radius: 4px;
@@ -63,7 +63,7 @@ export default {
   line-height: 30px;
 }
 .my-pic {
-  height: 25rem;
+  height: 30rem;
 }
 #home ul {
   list-style: none;
