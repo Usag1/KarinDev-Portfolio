@@ -14,14 +14,21 @@
           </svg></a>
       </li>
     </ul>
-    <div class="home-center">
-      <h1>Karin Ikenaga</h1>
-      <p>Web designer<br>&<br> Frontend developer</p>
-      <router-link :to="{ name:'Contact' }" class="button" >
-      Contact me
-      </router-link>
+    <div class="container">
+      <div class="home-center">
+        <h1>Karin Ikenaga</h1>
+        <p>Web designer<br>&<br> Frontend developer</p>
+        <router-link :to="{ name:'Contact' }" class="button" >
+        Contact me
+        </router-link>
+      </div>
+      <div class="home-img">
+        <img class="my-pic" src="../assets/home-pic1.png" alt="my-pic">
+        <div class="frame"></div>
+        <div class="frame2"></div>
+        <div class="frame3"></div>
+      </div>
     </div>
-    <img class="my-pic" src="../assets/KarinDev.png" alt="my-pic">
   </div>
 </template>
 
@@ -34,13 +41,18 @@ export default {
 
 <style scoped>
 #home {
-  padding-top: 1em;
+  min-height: 95vh;
   display: grid;
-  gap: 10px;
   grid-template-columns: 30px 1fr 50%;
 }
+.container {
+  height: 100%;
+  position: relative;
+}
 .home-center{
-  padding-top: 12em;
+  position: absolute;
+  left: 30%;
+  margin: 35% 0 0 0;
 }
 #home .button {
   border-radius: 4px;
@@ -62,8 +74,53 @@ export default {
   font-size: 1.5rem;
   line-height: 30px;
 }
+.home-img {
+  margin: auto;
+  padding: 0;
+  position: absolute;
+  left: 100%;
+  position: relative;
+}
 .my-pic {
+  position: absolute;
+  right: 26%;
+  padding-top: 5%;
   height: 30rem;
+  border-radius: 80%;
+  z-index: 3;
+}
+.frame {
+  padding: 0;
+  position: absolute;
+  right: 37%;
+  transform: rotate(-45deg);
+  width: 15rem;
+  height: 33rem;
+  border: solid 2px #00838f;
+  border-radius: 50%; 
+  box-shadow: 1px 0 5px 1px #00838f;
+}
+.frame2 {
+  padding: 0;
+  position: absolute;
+  right: 37%;
+  transform: rotate(45deg);
+  width: 15rem;
+  height: 33rem;
+  border: solid 2px #00838F;
+  border-radius: 50%;
+  box-shadow: 1px 0 5px 1px #00838f;
+}
+.frame3 {
+  padding: 0;
+  position: absolute;
+  right: 37%;
+  transform: rotate(90deg);
+  width: 15rem;
+  height: 33rem;
+  border: solid 2px #ffffff;
+  border-radius: 50%;
+  box-shadow: 1px 0 5px 1px;
 }
 #home ul {
   list-style: none;
@@ -81,7 +138,7 @@ export default {
 }
 
 /* Mobile & Tablet */
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   #home {
   display: flex;
   flex-direction: column-reverse;
@@ -107,7 +164,7 @@ export default {
   font-size: 1.2rem;
   line-height: 25px;
   }
-  .my-pic {
+  .home-img {
   display: none;
   }
   #home ul {
