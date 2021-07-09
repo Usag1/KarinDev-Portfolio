@@ -58,6 +58,7 @@ import Navbar_mobile from './Navbar_mobile';
 
 <style scoped>
 .nav {
+  height: 5vh;
   padding: 30px;
   display: flex;
   justify-content: space-between;

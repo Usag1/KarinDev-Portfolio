@@ -1,12 +1,12 @@
 <template>
     <div class="navbar_mobile">
-        <router-link :to="{ name: 'Home' }" @click="showNav">Home</router-link>
+        <router-link :to="{ name: 'Home' }" @click="!showNav">Home</router-link>
        
-        <router-link :to="{ name: 'About' }" @click="showNav">About</router-link>
+        <router-link :to="{ name: 'About' }" @click="!showNav">About</router-link>
       
-        <router-link :to="{ name: 'Blog' }" @click="showNav">Blog</router-link>
+        <router-link :to="{ name: 'Blog' }" @click="!showNav">Blog</router-link>
       
-        <router-link :to="{ name: 'Contact' }" @click="showNav">Contact</router-link>
+        <router-link :to="{ name: 'Contact' }" @click="!showNav">Contact</router-link>
     </div>
 </template>
 
