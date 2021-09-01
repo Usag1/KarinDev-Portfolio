@@ -27,8 +27,9 @@ import Header from './components/Header';
   background: #212121;
   background-size: auto;
   margin: 0 auto;
-  padding: 0 4% 4%;
-  min-height: 100vh;
+  padding: 0%;
+  height: 100%;
+  width: 100%;
 }
 h2 {
   font-size: 2.5rem;
