@@ -45,6 +45,7 @@ import NavbarMobile from './NavbarMobile';
   },
   created() {
     this.handleView();
+    window.addEventListener('resize', this.handleView);
   },
   computed: {
     x: function(){

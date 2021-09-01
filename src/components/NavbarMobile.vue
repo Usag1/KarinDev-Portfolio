@@ -11,12 +11,8 @@
 </template>
 
 <script>
-import Header from './Header';
     export default {
-       name: 'Navbar_mobile',
-       components: {
-           Header
-       }
+       name: 'NavbarMobile'
     }
 </script>
 
