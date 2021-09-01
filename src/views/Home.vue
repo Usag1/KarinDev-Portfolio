@@ -24,9 +24,9 @@
       </div>
       <div class="home-img">
         <img class="my-pic" src="../assets/home-pic1.png" alt="my-pic">
-        <div class="frame"></div>
-        <div class="frame2"></div>
-        <div class="frame3"></div>
+        <span class="frame1"></span>
+        <span class="frame2"></span>
+        <span class="frame3"></span>
       </div>
     </div>
   </div>
@@ -41,18 +41,18 @@ export default {
 
 <style scoped>
 #home {
-  min-height: 95vh;
+  min-height: 80vh;
+  padding: 3%;
   display: grid;
-  grid-template-columns: 30px 1fr 50%;
+  grid-template-columns: 30px 1fr;
 }
 .container {
-  height: 100%;
   position: relative;
 }
-.home-center{
+.home-center {
   position: absolute;
-  left: 30%;
-  margin: 35% 0 0 0;
+  top: 42%;
+  left: 10%;
 }
 #home .button {
   border-radius: 4px;
@@ -61,63 +61,59 @@ export default {
   background: #00838F;
   color: #212121;
   cursor: pointer;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   transition: all .2s;  
 }
 #home .button:hover {
   box-shadow: 0 0 8px 2px #00838F; 
 }
 #home h1 {
-  font-size: 2.5rem;
+  font-size: 2.7rem;
 }
 #home p {
   font-size: 1.5rem;
   line-height: 30px;
 }
 .home-img {
-  margin: auto;
-  padding: 0;
   position: absolute;
-  left: 100%;
-  position: relative;
+  top: 12%;
+  right: 10%;
 }
 .my-pic {
-  position: absolute;
-  right: 26%;
-  padding-top: 5%;
-  height: 30rem;
+  position: relative;
+  height: 35rem;
   border-radius: 80%;
   z-index: 3;
 }
-.frame {
-  padding: 0;
+.frame1 {
   position: absolute;
-  right: 37%;
+  top: -9%;
+  right: 21%;
   transform: rotate(-45deg);
   width: 15rem;
-  height: 33rem;
+  height: 42rem;
   border: solid 2px #00838f;
   border-radius: 50%; 
   box-shadow: 1px 0 5px 1px #00838f;
 }
 .frame2 {
-  padding: 0;
   position: absolute;
-  right: 37%;
+  top: -9%;
+  right: 21%;
   transform: rotate(45deg);
   width: 15rem;
-  height: 33rem;
+  height: 42rem;
   border: solid 2px #00838F;
   border-radius: 50%;
   box-shadow: 1px 0 5px 1px #00838f;
 }
 .frame3 {
-  padding: 0;
   position: absolute;
-  right: 37%;
+  top: -9%;
+  right: 21%;
   transform: rotate(90deg);
   width: 15rem;
-  height: 33rem;
+  height: 42rem;
   border: solid 2px #ffffff;
   border-radius: 50%;
   box-shadow: 1px 0 5px 1px;
@@ -136,25 +132,15 @@ export default {
   color: #00838F;
   transform: scale(1.3);
 }
-
-/* Mobile & Tablet */
-@media (max-width: 768px) {
-  #home {
-  display: flex;
-  flex-direction: column-reverse;
+ 
+@media screen and (max-width: 1200px), 
+       screen and (max-height: 850px){
+  .container {
+    padding-top: 30%;
   }
-  #home .button {
-  border-radius: 4px;
-  padding: 6px 12px;
-  text-decoration: none;
-  background: #00838F;
-  color: #212121;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: all .2s;  
-  }
-  .home-center{
-  padding-top: 0;
+  .my-pic {
+    height: 24rem;
+    left: 3%;
   }
   #home h1 {
   font-size: 1.5rem;
@@ -164,16 +150,63 @@ export default {
   font-size: 1.2rem;
   line-height: 25px;
   }
+  .frame1 {
+    width: 9rem;
+    height: 27rem;
+  }
+  .frame2 {
+    width: 9rem;
+    height: 27rem;
+  }
+  .frame3 {
+    width: 9rem;
+    height: 27rem;
+  }
+}
+/* Mobile & Tablet */
+@media (max-width: 768px) {
+  #home {
+    display: flex;
+    flex-flow: column;
+  }
+  #home .button {
+    border-radius: 4px;
+    padding: 6px 12px;
+    text-decoration: none;
+    background: #00838F;
+    color: #212121;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all .2s;  
+  }
+  .container {
+    height: 100%;
+    margin: 0;
+    padding: 20% 0;
+  }
+  .home-center {
+    position: relative;
+    left: 0;    
+  }
+  #home h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  #home p {
+    font-size: 1.2rem;
+    line-height: 25px;
+  }
   .home-img {
-  display: none;
+    display: none;
   }
   #home ul {
-  display: flex;
-  justify-content: center;
-  margin-top: 5em;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 16%;
   }
   .bi {
-  margin: 0 .6em;
+    margin: 0 .6em;
   }
 }
 </style>

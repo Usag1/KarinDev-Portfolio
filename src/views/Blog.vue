@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="blog">
         <h2>Blog</h2>
         <Latest :posts="posts" />
         <Posts :posts="posts" :count="postCount" @showMore="this.showMore" />
@@ -51,5 +51,9 @@ export default {
 </script>
 
 <style>
-
+.blog {
+    height: 100%;
+    margin: 0;
+    padding: 3%;
+}
 </style>

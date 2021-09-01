@@ -48,6 +48,10 @@
 </script>
 
 <style scoped>
+.contact {
+    height: 100%;
+    padding: 3%;
+}
 .card {
     text-align: left;
     color: #757575;
@@ -141,9 +145,9 @@ input[type="submit"]:active {
 }
 
 /* Mobile & Tablet */
-@media (max-width: 540px) {
+@media (max-width: 768px) {
     .contact {
-        padding-bottom: 800px;
+        padding-bottom: 50em;
     }
     .card {
         text-align: center;

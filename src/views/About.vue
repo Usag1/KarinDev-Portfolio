@@ -26,6 +26,10 @@
 </script>
 
 <style scoped>
+.about {
+  min-height: 80vh;
+  padding: 3%;
+}
 h3 {
   margin-top: 5%;
   font-size: 1.8rem;
