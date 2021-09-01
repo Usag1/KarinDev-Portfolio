@@ -1,19 +1,19 @@
 <template>
-  <Navbar_mobile v-if="mobileView" :class="{'open':!showNav}" />
+  <NavbarMobile v-if="mobileView" :class="{'open':!showNav}" />
   <div class="nav">
+    <div class="menu-icon" v-if="mobileView" @click="showNav = !showNav">
+      <button class="burger-x" :class="x">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
     <div class="header-left">
      <img src="https://see.fontimg.com/api/renderfont4/dE0g/eyJyIjoiZnMiLCJoIjoxNDUsInciOjE3NjUsImZzIjo4MiwiZmdjIjoiI0ZGRkNGQyIsImJnYyI6IiMwM0EwOEIiLCJ0IjoxfQ/S2FyaW5EZXY/beautiful-people-personal-use.png" 
      alt="Fancy fonts" class="logo">
     </div>
     <div class="header-right">
       <Navbar v-if="!mobileView" />
-      <div class="menu-icon" v-if="mobileView" @click="showNav = !showNav">
-        <button class="burger-x" :class="x">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
     </div>
   </div>
   <transition name="router-anim" enter-active-class="animated fadeInDown" leave-active-class="animated fadeOutDown">
@@ -24,13 +24,13 @@
 <script>
 import { computed } from 'vue';
 import Navbar from './Navbar';
-import Navbar_mobile from './Navbar_mobile';
+import NavbarMobile from './NavbarMobile';
 
   export default {
   name: 'Header',
   components: {
     Navbar,
-    Navbar_mobile
+    NavbarMobile
   },
   data: () => {
     return {
@@ -40,7 +40,7 @@ import Navbar_mobile from './Navbar_mobile';
   },
   methods: {
     handleView() {
-      this.mobileView = window.innerWidth <= 760;
+      this.mobileView = window.innerWidth <= 768;
     }
   },
   created() {
@@ -59,7 +59,7 @@ import Navbar_mobile from './Navbar_mobile';
 <style scoped>
 .nav {
   height: 5vh;
-  padding: 30px;
+  padding: 3%;
   display: flex;
   justify-content: space-between;
 }
@@ -109,14 +109,18 @@ import Navbar_mobile from './Navbar_mobile';
 }
 .burger-x.x span:nth-of-type(1) {
   transform: translateY(12.5px) rotate(-315deg);
+  z-index: 5;
 }
 .burger-x.x span:nth-of-type(2) {
   opacity: 0;
+  z-index: 5;
 }
 .burger-x.x span:nth-of-type(3) {
   transform: translateY(-12.5px) rotate(315deg);
+  z-index: 5;
 }
 .open {
-  transform: translateX(760px);
+  transform: translateX(-103%);
+  transition: all 2.1s;
 }
 </style>

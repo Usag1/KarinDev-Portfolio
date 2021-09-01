@@ -17,8 +17,7 @@
 <style scoped>
 .posts {
     width: 100%;
-    max-width: 1280px;
-    margin: 50px auto;
+    margin: 0 auto;
 }
 .post {
     display: block;
